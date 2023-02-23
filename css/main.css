@@ -1,0 +1,746 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+@font-face {
+    font-family: FC Minimal Regular;
+    src: url(Font_FC-Minimal/FC Minimal Regular.otf) format("truetype");
+}
+
+.circle {
+    height: 24px;
+    width: 24px;
+    border-radius: 24px;
+    background-color: #3F3B6C;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 99999999;
+}
+
+.footer {
+
+    position: fixed;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: #3F3B6C;
+    text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.3);
+
+}
+
+#wrapper {
+    z-index: 55555;
+    left: 77%;
+    position: fixed;
+    width: 35px;
+    height: 30px;
+    margin: 45px 20px;
+}
+
+.line {
+
+    cursor: pointer;
+    display: none;
+    height: 5px;
+    width: 100%;
+    background: #3F3B6C;
+    border-radius: 2px;
+    transition: 0.3s ease;
+
+}
+
+.top {
+    transform: translateY(-4px);
+}
+
+.bottom {
+    transform: translateY(4px);
+}
+
+.bar {
+    position: relative;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    margin: 40px 20px;
+    left: 50px;
+
+}
+
+.navbar {
+
+    border-radius: 50px;
+    align-items: center;
+    display: flex;
+    padding: 0;
+    margin: 25px 0 0 70%;
+
+}
+
+.navbar li {
+    display: flex;
+    list-style: none;
+    margin: 0px 0 0 20%;
+
+}
+
+.navbar li a {
+    position: relative;
+    display: flex;
+    font-family: 'Unbounded', cursive;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px 10px 15px;
+    top: 10px;
+    color: #3F3B6C;
+    text-decoration: none;
+
+
+
+
+
+}
+
+.navbar li a:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    border-radius: 15px;
+    background: #3F3B6C;
+
+    transition: all 0.4s ease;
+
+
+
+}
+
+.navbar li a.active {
+
+    color: #3F3B6C;
+}
+
+
+
+.navbar li a:hover::before {
+
+    width: 100%;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+
+.loading {
+    z-index: 100;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    background: white;
+    /*    transition: */
+    pointer-events: none;
+}
+
+
+svg {
+    display: flex;
+    width: 600px;
+}
+
+
+#L path {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #EFBBD7;
+    stroke-dasharray: 500;
+    opacity: 10;
+    animation: animate-L 2s linear forwards;
+}
+
+@keyframes animate-L {
+    0% {
+        opacity: 0;
+        stroke-dashoffset: 500;
+        fill: transparent;
+    }
+
+    30% {
+        opacity: 10;
+        stroke-dashoffset: 500;
+        fill: transparent;
+    }
+
+    100% {
+        opacity: 10;
+        stroke-dashoffset: 0;
+        fill: #EFBBD7;
+    }
+
+
+}
+
+
+#U path {
+    opacity: 10;
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #3F3B6C;
+    stroke-dasharray: 500;
+    animation: animate-U 3s linear forwards;
+
+}
+
+@keyframes animate-U {
+    0% {
+        opacity: 0;
+        stroke-dashoffset: 500;
+        fill: transparent;
+    }
+
+    30% {
+        opacity: 10;
+        stroke-dashoffset: 500;
+        fill: transparent;
+    }
+
+    100% {
+        opacity: 10;
+        stroke-dashoffset: 0;
+        fill: #3F3B6C;
+    }
+
+
+}
+
+#V path {
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: #EFBBD7;
+    stroke-dasharray: 500;
+    opacity: 10;
+    animation: animate-V 3.5s forwards;
+
+}
+
+@keyframes animate-V {
+    0% {
+        opacity: 0;
+        stroke-dashoffset: 500;
+        fill: transparent;
+    }
+
+    30% {
+        opacity: 10;
+        stroke-dashoffset: 500;
+        fill: transparent;
+    }
+
+    100% {
+        opacity: 10;
+        stroke-dashoffset: 0;
+        fill: #EFBBD7;
+    }
+
+
+}
+
+
+.topic {
+    margin: 20px;
+    position: relative;
+    text-align: center;
+    color: #3F3B6C;
+    font-family: 'Kanit', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.contents {
+    position: relative;
+    /*    top: vw;*/
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+
+}
+
+.text {
+    color: #3F3B6C;
+    font-family: 'Kanit', sans-serif;
+
+
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+p {
+    margin: 0;
+    font-size: 25px;
+}
+
+.button {
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    width: 170px;
+    height: 45px;
+    margin: auto;
+    background-color: #3F3B6C;
+    border: none;
+    border-radius: 18px;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: 'Kanit', sans-serif;
+    transition: 0.3 ease;
+
+
+
+}
+
+.button:hover {
+    background-color: #726DB1;
+    color: whitesmoke;
+    transition: 0.3 ease;
+}
+
+/*
+
+stress
+*/
+div .card-stress {
+
+    flex: 50%;
+}
+
+.pic_stress img {
+    top: 30px;
+    position: relative;
+    width: 20vw;
+}
+
+.text.stress {
+    position: relative;
+    top: 50px;
+}
+
+.button.stress {
+    top: 50px;
+    margin: 10px;
+}
+
+.back-stress {
+    position: relative;
+    top: 40px;
+    border-radius: 18px;
+    margin: auto;
+    margin-right: 0;
+    background-color: #CFCFED;
+    width: 22vw;
+    height: 27vw;
+      -webkit-transition-duration: 1s;
+}
+.back-stress:hover,
+.back-stress:focus,
+.back-stress:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*anxiety*/
+.card-anxiety {
+    flex: 50%;
+
+}
+
+.back-anxiety {
+    top: 40px;
+    position: relative;
+    border-radius: 18px;
+    margin: auto;
+    background-color: #F2E3EB;
+    width: 22vw;
+    height: 27vw;
+       -webkit-transition-duration: 1s;
+}
+
+
+.pic_anxiety img {
+    bottom: 20px;
+    position: relative;
+    width: 7.5vw;
+}
+
+
+.text.anxiety {}
+
+.button.anxiety {
+    margin: 10px;
+}
+
+.back-anxiety:hover,
+.back-anxiety:focus,
+.back-anxiety:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/*depression*/
+
+.card-depression {
+    flex: 50%;
+}
+
+.pic_depression img {
+    top: 30px;
+    position: relative;
+    width: 11vw;
+
+}
+
+.back-depression {
+    position: relative;
+    top: 40px;
+    border-radius: 18px;
+    margin: auto 0;
+    background-color: #CFCFED;
+    width: 22vw;
+    height: 27vw;
+      -webkit-transition-duration: 1s;
+}
+
+.back-depression:hover,
+.back-depression :focus,
+.back-depression:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.text.depression {
+    top: 3vw;
+    position: relative;
+}
+
+.button.depression {
+    top: 3vw;
+    position: relative;
+    margin: 10px;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: #3F3B6C;
+
+}
+
+@media screen and (max-width:768px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+
+        left: 0;
+    }
+
+    .line {
+        display: block;
+    }
+
+
+    .close .top {
+        transform: translateY(4px) rotate(-45deg);
+        background: white;
+    }
+
+    .close .bottom {
+        transform: translateY(-6px) rotate(45deg);
+        background: white;
+    }
+
+    .close .middle {
+        opacity: 0;
+    }
+
+    .close {
+        display: block;
+        transition: all 1.2s ease;
+    }
+
+    .navbar {
+        margin: 0;
+        border-radius: 0;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        position: fixed;
+        align-items: center;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+
+        clip-path: circle(0% at 600px 10px);
+        background: #3F3B6C;
+
+        cursor: pointer;
+
+        transition: all 1.2s ease;
+    }
+
+    .change-bar {
+
+        clip-path: circle(100%);
+        background: #3F3B6C;
+
+        transition: all 1.2s ease;
+
+    }
+
+
+    .navbar li a {
+        font-weight: 600;
+        display: block;
+        font-size: 30px;
+        margin: 160px 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        color: white;
+
+
+
+    }
+
+    .navbar li a:hover {
+        background: none;
+    }
+
+    .navbar li {
+        display: block;
+        margin: 0;
+    }
+
+    .navbar li a:before {
+        background: none;
+
+
+    }
+
+    .navbar li a.active {
+        color: palevioletred;
+    }
+
+
+
+    .topic {
+        z-index: -5;
+        top: 35vw;
+        font-size: 35px;
+    }
+
+    .contents {
+
+        display: flex;
+        margin: auto;
+        text-align: left;
+        top: 25vw;
+        flex-direction: column;
+
+
+    }
+
+    .button {
+        width: 150px;
+        height: 40px;
+        font-size: 17px;
+    }
+
+
+
+    h3 {
+        font-size: 25px;
+    }
+
+    p {
+        font-size: 20px;
+
+    }
+
+    /*    stress */
+    div .card-stress {
+
+        margin: 20px;
+        flex: 30%;
+    }
+
+    .pic_stress img {
+
+        right: 40px;
+        top: 35px;
+        position: relative;
+        width: 55vw;
+    }
+
+    .text.stress {
+        top: 10px;
+        margin-left: 45vw;
+        text-align: left;
+        padding: 10px;
+        position: absolute;
+
+    }
+
+    .button.stress {
+
+        position: absolute;
+        top: 32vw;
+        margin: 10px;
+        left: 44vw;
+    }
+
+    .back-stress {
+        overflow: hidden;
+        position: relative;
+        top: 40px;
+        border-radius: 18px;
+        margin: auto;
+        margin-right: 0;
+        background-color: #CFCFED;
+        width: 90vw;
+        height: 50vw;
+    }
+
+    /*anxiety*/
+
+
+    .card-anxiety {
+
+        margin: 20px;
+        flex: 30%;
+
+    }
+
+    .back-anxiety {
+
+        overflow: hidden;
+        position: relative;
+        top: 40px;
+        border-radius: 18px;
+        margin: auto;
+        margin-right: 0;
+        background-color: #CFCFED;
+        width: 90vw;
+        height: 50vw;
+    }
+
+
+    .pic_anxiety img {
+        left: 20px;
+        top: 10px;
+        position: relative;
+        width: 27vw;
+    }
+
+
+    .text.anxiety {
+        top: 10px;
+        margin-left: 42vw;
+        text-align: left;
+        padding: 10px;
+        position: absolute;
+    }
+
+    .button.anxiety {
+        position: absolute;
+        top: 30vw;
+        margin: 10px;
+        left: 40vw;
+    }
+
+    /*    depression*/
+    .card-depression {
+
+        margin: 20px;
+        flex: 30%;
+        margin-bottom: 30vw;
+    }
+
+    .pic_depression img {
+        left: 15px;
+        top: 18px;
+        position: relative;
+        width: 35vw;
+
+    }
+
+    .back-depression {
+        overflow: hidden;
+        position: relative;
+        top: 40px;
+        border-radius: 18px;
+        margin: auto;
+        margin-right: 0;
+        background-color: #CFCFED;
+        width: 90vw;
+        height: 50vw;
+    }
+
+    .text.depression {
+        top: 8px;
+        margin-left: 40vw;
+        text-align: left;
+        padding: 10px;
+        position: absolute;
+    }
+
+    .button.depression {
+        position: absolute;
+        top: 30vw;
+        margin: 10px;
+        left: 39vw;
+    }
+
+    .footer {
+        width: auto;
+        margin: 20vw 10px 0 10px;
+        position: relative;
+
+    }
+}

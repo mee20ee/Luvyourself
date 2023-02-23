@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>LUV YOUR SELF</title>
+    <link rel="icon" type="image/x-icon" sizes="16×16" href="pics/logo.png">
+    <link href='https://fonts.googleapis.com/css?family=Kanit&subset=thai,latin' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Unbounded&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="css/depression_test.css">
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="crossorigin="anonymous"></script>
+</head>
+
+<body>
+     <!--  Mouse Move-->
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+
+    <div class="background">
+        <div class="Head" id="main-menu">
+            <div id="wrapper">
+                <div class="menu">
+                    <span class="line top"></span>
+                    <span class="line middle"></span>
+                    <span class="line bottom"></span>
+                </div>
+            </div>
+            <div class="bar">
+                <div class="logo"><img src="pics/logonew.png" alt="" idth="50" height="30"></div>
+                <ul class="navbar">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="care.html">Care</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <!--   Start Asessment-->
+        <div class="Contents">
+            <h1>คำแนะนำ</h1>
+            <p>แบบประเมินนี้เป็นประโยคที่มีข้อความเกี่ยวข้องกับอารมณ์
+            ความรู้สึกที่แสดงออกในลักษณะต่างๆ<br>ขอให้คุณเลือกคำตอบที่ตรงกับตัวคุณมากที่สุด <br>ไม่มีคำตอบที่ถูกหรือผิด ดีหรือไม่ดี โปรดตอบตามความเป็นจริง <br>เพื่อคุณจะได้รู้จักตนเองและวางแผนพัฒนาตนต่อไป<br>
+            และโปรดทราบว่านี่เป็นแบบทดสอบด้วยตนเองโดยมีข้อจำกัด<br>
+            สำหรับการวินิจัยและการรับการรักษาที่ถูกต้องคุณควรปรึกษาแพทย์</p>
+            <button class="btn">เริ่มทำแบบทดสอบ</button>
+        </div>
+
+        <!--    quize questions-->
+
+
+        <div class="depressionQuiz">
+            <div class="question">
+                <h2 id="questionNo"></h2>
+                <h2 id="questionText"></h2>
+            </div>
+
+            <!--Answers Section-->
+            <div id="optionList">
+                <h3 class="choice" id="option1"> </h3>
+                <h3 class="choice" id="option2"> </h3>
+                <h3 class="choice" id="option3"></h3>
+                <h3 class="choice" id="option4"></h3>
+
+            </div>
+
+            <!--        progress bar section-->
+            <div class="progressText"></div>
+            <div class="ProgressBar">
+                <div class="ProgessValue">
+                </div>
+            </div>
+        </div>
+        <div class="view">
+            <img id="ground1" src="pics/ground1.png" alt="">
+            <img id="ground2" src="pics/ground2.png" alt="">
+            <img id="ground3" src="pics/ground3.png" alt="">
+            <img id="cloud" src="pics/cloud.png" alt="">
+        </div>
+
+        <section>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+        </section>
+
+        <div class="footer">COPYRIGHT ©2022-2023 LUV YOUR SELF BY NUSMEE</div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="js/depression_question.js"></script>
+    <script src="js/depression.js"></script>
+</body></html>

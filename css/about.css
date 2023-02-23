@@ -1,0 +1,254 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #FFE5F1;
+
+
+}
+
+@font-face {
+    font-family: FC Minimal Regular;
+    src: url(Font_FC-Minimal/FC Minimal Regular.otf) format("truetype");
+}
+
+#wrapper {
+    z-index: 11;
+    left: 77%;
+    position: fixed;
+    width: 35px;
+    height: 30px;
+    margin: 30px 20px;
+}
+
+.line {
+
+    cursor: pointer;
+    display: none;
+    height: 5px;
+    width: 100%;
+    background: #3F3B6C;
+    border-radius: 2px;
+    transition: 0.3s ease;
+
+}
+
+.top {
+    transform: translateY(-4px);
+}
+
+.bottom {
+    transform: translateY(4px);
+}
+
+.bar {
+    position: relative;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    margin: 40px;
+    left: 50px;
+
+}
+
+.navbar {
+    background: white;
+    border-radius: 50px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+    margin: 25px 0 0 70%;
+    padding: 0px;
+
+}
+
+.navbar li a {
+    display: flex;
+    font-family: 'Unbounded', cursive;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px 40px;
+    top: 10px;
+    color: #3F3B6C;
+
+
+
+
+}
+
+.navbar li a:hover {
+    background: #3F3B6C;
+    color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    top: 6vw;
+    position: relative;
+
+}
+
+.pics {
+    flex: 50%;
+
+}
+
+img.img {
+    width: 15vw;
+    left: 18vw;
+    position: relative;
+}
+
+
+.about h2 {
+    color: #3F3B6C;
+    font-family: FC Minimal Regular;
+    font-weight: 700;
+    position: relative;
+    right: 20%;
+    margin: 20px;
+    font-size: 40px;
+
+}
+
+.about h3 {
+    color: #3F3B6C;
+    position: relative;
+    right: 20%;
+    margin: 20px;
+    float: right;
+    font-size: 27px;
+    font-family: FC Minimal Regular;
+    font-weight: 400;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 15px;
+    width: 100%;
+    text-align: center;
+    font-family: 'Kanit', sans-serif;
+    color: #3F3B6C;
+
+}
+
+@media screen and (max-width:768px) {
+    body {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+    }
+
+    .logo {
+        display: flex;
+        position: absolute;
+        margin: 20px;
+        left: 10px;
+    }
+
+    .line {
+        display: block;
+    }
+
+
+    .close .top {
+        transform: translateY(4px) rotate(-45deg);
+    }
+
+    .close .bottom {
+        transform: translateY(-6px) rotate(45deg);
+    }
+
+    .close .middle {
+        opacity: 0;
+    }
+
+    .close {
+        display: block;
+    }
+
+    .navbar {
+        margin: 0;
+        border-radius: 0;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        background-color: pink;
+        position: fixed;
+        align-items: center;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        z-index: 1;
+        clip-path: circle(0% at 600px 10px);
+        background: linear-gradient(180deg, rgba(240, 219, 254, 1) 0%, rgba(255, 209, 229, 1) 35%, rgba(246, 207, 226, 1) 57%, rgba(236, 245, 255, 1) 100%);
+        cursor: pointer;
+
+        transition: all 1.2s ease;
+    }
+
+    .change-bar {
+        clip-path: circle(100%);
+        background: linear-gradient(180deg, rgba(240, 219, 254, 1) 0%, rgba(255, 209, 229, 1) 35%, rgba(246, 207, 226, 1) 57%, rgba(236, 245, 255, 1) 100%);
+    }
+
+
+    .navbar li a {
+        font-weight: 600;
+        display: block;
+        font-size: 30px;
+        margin: 160px 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+
+    }
+
+    .navbar li a:hover {
+        background: none;
+    }
+
+    .container {
+        top: 30vw;
+
+    }
+
+    img.img {
+        left: 35vw;
+        bottom: 45vw;
+        width: 30vw;
+
+        position: relative;
+    }
+
+    .about {
+        position: relative;
+        top: 70vw;
+        margin-bottom: 20vw;
+    }
+
+    .footer {
+        position: relative;
+        margin-top: 90vw;
+        margin-bottom: 10px;
+
+    }
+}

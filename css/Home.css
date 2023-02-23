@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+@font-face{
+    font-family:FC Minimal Regular;
+    src:url(Font_FC-Minimal/FC Minimal Regular.otf) format("truetype");
+}
+
+#wrapper {
+    z-index: 11;
+    left: 77%;
+    position: fixed;
+    width: 35px;
+    height: 30px;
+    margin: 30px 20px;
+}
+
+.line {
+
+    cursor: pointer;
+    display: none;
+    height: 5px;
+    width: 100%;
+    background: #3F3B6C;
+    border-radius: 2px;
+    transition: 0.3s ease;
+
+}
+
+.top {
+    transform: translateY(-4px);
+}
+
+.bottom {
+    transform: translateY(4px);
+}
+
+.bar {
+    position: relative;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    position: absolute;
+    margin: 40px;
+    left: 50px;
+
+}
+
+.navbar {
+    background: white;
+    border-radius: 50px;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    list-style: none;
+    margin: 25px 0 0 62%;
+    padding: 0px;
+
+}
+
+.navbar li a {
+    display: flex;
+    font-family: 'Unbounded', cursive;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 20px 40px;
+    top: 10px;
+    color: #3F3B6C;
+
+
+
+
+}
+
+.navbar li a:hover {
+    background: #3F3B6C;
+    color: white;
+    border-radius: 50px;
+    transition: 0.5s;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.container {}
+
+.text {
+
+    margin: auto;
+
+    color: #3F3B6C;
+    ;
+}
+
+.slider h1 {
+    margin-top: 10%;
+    font-size: 70px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}
+
+.slider h2 {
+    font-size: 60px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.slider .card {
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    margin: auto;
+    justify-items: center;
+    align-items: center;
+
+
+
+}
+
+.slider .card svg {
+    justify-items: center;
+    align-items: center;
+    left: 90%;
+    width: 60%;
+    margin: auto;
+
+
+
+}
+
+.circle {
+    margin: auto;
+    width: 150vh;
+    height: 150vh;
+    border-radius: 50%;
+    background-color: lightpink;
+    position: absolute;
+    z-index: -1;
+    top: 30%;
+    left: 13%;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+    body {
+        margin: 10px 0 10px 0;
+        box-sizing: border-box;
+        justify-items: center;
+    }
+
+    .logo {
+        display: flex;
+        position: absolute;
+        margin: 20px;
+        left: 10px;
+    }
+
+    .container {}
+
+    .topic {
+        justify-content: center;
+        top: 50px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px;
+        top: 80px;
+    }
+
+    h2 {
+        font-size: 50px;
+        top: 45px;
+    }
+
+    h3 {
+        font-size: 40px;
+        top: 0px;
+    }
+
+    .line {
+        display: block;
+    }
+
+
+    .close .top {
+        transform: translateY(4px) rotate(-45deg);
+    }
+
+    .close .bottom {
+        transform: translateY(-6px) rotate(45deg);
+    }
+
+    .close .middle {
+        opacity: 0;
+    }
+
+    .close {
+        display: block;
+    }
+
+    .navbar {
+        margin: 0;
+        border-radius: 0;
+        height: 100vh;
+        width: 100%;
+        display: block;
+        background-color: pink;
+        position: fixed;
+        align-items: center;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 0;
+        z-index: 1;
+        clip-path: circle(0% at 600px 10px);
+        background: linear-gradient(180deg, rgba(240, 219, 254, 1) 0%, rgba(255, 209, 229, 1) 35%, rgba(246, 207, 226, 1) 57%, rgba(236, 245, 255, 1) 100%);
+        cursor: pointer;
+
+        transition: all 1.2s ease;
+    }
+
+    .change-bar {
+        clip-path: circle(100%);
+        background: linear-gradient(180deg, rgba(240, 219, 254, 1) 0%, rgba(255, 209, 229, 1) 35%, rgba(246, 207, 226, 1) 57%, rgba(236, 245, 255, 1) 100%);
+    }
+
+
+    .navbar li a {
+        font-weight: 600;
+        display: block;
+        font-size: 30px;
+        margin: 110px 0;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+
+
+    }
+
+    .navbar li a:hover {
+        background: none;
+    }
+
+    .container{
+        position: relative;
+
+    }
+
+}
