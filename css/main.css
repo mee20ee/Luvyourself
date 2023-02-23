@@ -528,7 +528,7 @@ div .card-stress {
 
         clip-path: circle(100%);
         background: #3F3B6C;
-
+        position:relative;
         transition: all 1.2s ease;
 
     }
