@@ -393,6 +393,10 @@ a:link {
     z-index: 1;
 }
 
+.a {
+    display: flex;
+    justify-content: center;
+}
 
 .Contents {
     color: #3F3B6C;
@@ -401,11 +405,11 @@ a:link {
     width: 100%;
     text-align: center;
     justify-content: center;
-
+    width: 712px;
     top: 25%;
     font-family: 'Kanit',
         sans-serif;
-/*    animation: fadeIn 2s;*/
+    /*    animation: fadeIn 2s;*/
     /*    text-shadow: 1px 2px 4px rgba(0,0,0,0.1);*/
 }
 
@@ -601,7 +605,7 @@ h2#questionNo {
 /*Progress Bar*/
 
 .progressText {
-   position: absolute;
+    position: absolute;
     font-size: 25px;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
@@ -680,6 +684,7 @@ span {
         left: 0;
         z-index: 88;
     }
+
     .Contents {
         top: 12%;
     }
@@ -803,6 +808,7 @@ span {
     }
 
     .Contents {
+        width: 355px;
         top: 12%;
     }
 
@@ -829,9 +835,10 @@ span {
         position: absolute;
         z-index: 13;
     }
-    .progressText{
+
+    .progressText {
         top: 31rem;
-}
+    }
 
     .ProgressBar {
         top: 34rem;
