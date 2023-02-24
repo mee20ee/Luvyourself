@@ -272,7 +272,7 @@ if (index < MAX_question) {
 
 function goToResultpage() {
     index = 0;
-    location.href = "./ResultStress.html";
+    location.href = "./resultstress.html";
 }
 
 
