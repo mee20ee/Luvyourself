@@ -400,10 +400,9 @@ a:link {
     color: #3F3B6C;
     z-index: 1000;
     position: absolute;
-    width: 100%;
     text-align: center;
     justify-content: center;
-
+    width: 712px;
     top: 25%;
     font-family: 'Kanit',
         sans-serif;
@@ -774,6 +773,7 @@ span {
     }
 
     .Contents {
+        width: 355px;
         top: 12%;
     }
 
