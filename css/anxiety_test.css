@@ -408,7 +408,7 @@ a:link {
     width: 100%;
     text-align: center;
     justify-content: center;
-
+    width: 712px;
     top: 25%;
     font-family: 'Kanit',
         sans-serif;
@@ -786,6 +786,7 @@ span {
     }
 
     .Contents {
+        width: 355px;
         top: 12%;
     }
 
