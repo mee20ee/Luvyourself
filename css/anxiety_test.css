@@ -405,7 +405,6 @@ a:link {
     color: #3F3B6C;
     z-index: 4;
     position: absolute;
-    width: 100%;
     text-align: center;
     justify-content: center;
     width: 712px;
@@ -786,8 +785,8 @@ span {
     }
 
     .Contents {
-        width: 355px;
         top: 12%;
+        width: 355px;
     }
 
     .Contents p {
