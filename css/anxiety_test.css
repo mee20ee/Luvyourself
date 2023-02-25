@@ -587,10 +587,10 @@ h2#questionNo {
     font-weight: 100;
 }
 
-.active {
+/* .active {
     background: #3F3B6C;
     color: white;
-}
+} */
 
 .disabled {
     pointer-events: none;
