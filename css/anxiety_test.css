@@ -804,6 +804,19 @@ span {
         width: 20vw;
         top:30rem;
     }
+    .choice:hover::before {
+        color: white;
+        width:  0px;
+        height:  0px;
+    }
+
+
+
+    #optionList h3:hover {
+
+        color: #3F3B6C;
+        font-weight: 100;
+    }
 
     .ProgressBar {
         z-index: 3
