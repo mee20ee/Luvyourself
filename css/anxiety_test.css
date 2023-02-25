@@ -277,7 +277,8 @@ a:link {
 /*Footer*/
 .footer {
 
-  
+    display: flex;
+    flex-direction: column;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -285,7 +286,7 @@ a:link {
     text-align: center;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
-    z-index:3;
+    z-index:4;
 
 
 }
