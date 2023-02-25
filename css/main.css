@@ -25,15 +25,16 @@ body {
 
 .footer {
 
+   display: flex;
+    flex-direction: column;
     position: fixed;
     left: 0;
-    bottom: 15px;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
-    text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.3);
-
+    z-index: 4;
 }
 
 #wrapper {
@@ -740,10 +741,12 @@ div .card-stress {
         left: 39vw;
     }
 
-    .footer {
-        width: auto;
-        margin: 20vw 10px 0 10px;
-        position: relative;
-
+      div.footer {
+       position: relative;
+       margin-bottom:3rem;
+     
+    
+        
+          
     }
 }
