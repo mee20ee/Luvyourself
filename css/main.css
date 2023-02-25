@@ -71,27 +71,26 @@ body {
 }
 
 .logo {
-    display: flex;
-    position: absolute;
-    margin: 40px 20px;
+    flex: 20%;
+    margin: 40px 0 20px 7%;
     left: 50px;
 
 }
 
 .navbar {
-
+    flex: 0.7;
     border-radius: 50px;
     align-items: center;
     display: flex;
     padding: 0;
-    margin: 25px 0 0 70%;
+    
 
 }
 
 .navbar li {
     display: flex;
     list-style: none;
-    margin: 0px 0 0 20%;
+    margin: 0px 0 0 10%;
 
 }
 
@@ -474,7 +473,8 @@ div .card-stress {
     }
 
     .logo {
-
+         flex:none;
+        margin: 40px 0 20px 7%;  
         left: 0;
     }
 
@@ -523,6 +523,9 @@ div .card-stress {
 
         transition: all 1.2s ease;
     }
+    .bar {
+     flex-direction: column-reverse;
+}
 
     .change-bar {
 
