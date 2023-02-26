@@ -1,7 +1,8 @@
-@font-face {
+ @font-face {
     font-family: FC Minimal Regular;
     src: url(Font_FC-Minimal/FC Minimal Regular.otf) format("truetype");
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -164,7 +165,7 @@ body {
 
 
 #wrapper {
-    z-index:  999;
+    z-index: 999;
     left: 77%;
     position: fixed;
     width: 35px;
@@ -276,7 +277,6 @@ a:link {
 
 /*Footer*/
 .footer {
-
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -286,8 +286,8 @@ a:link {
     text-align: center;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
-    z-index:4;
-
+    z-index: 5;
+    
 
 }
 
@@ -401,11 +401,16 @@ a:link {
 
 }
 
-
+.all{
+    display: flex;
+    flex-direction: column;
+  
+}
+ 
 .Contents {
-
+ 
     color: #3F3B6C;
-    z-index: 50;
+    z-index: 4;
     position: absolute;
     text-align: center;
     justify-content: center;
@@ -465,6 +470,8 @@ a:link {
     /*    transition: opacity 1s;*/
     -webkit-transition-duration: 0.3s;
 
+
+
 }
 
 .btn:hover,
@@ -481,7 +488,8 @@ btn:active {
 /*question*/
 
 .anxietyQuiz {
-    flex-direction: row;
+    flex-direction:column;
+    align-items: center;
     top: 130px;
     display: none;
     position: relative;
@@ -492,10 +500,11 @@ btn:active {
 
 }
 
-
+ 
 
 
 div.question {
+    
     text-align: center;
     position: absolute;
     display: flex;
@@ -520,7 +529,7 @@ h2#questionNo {
 
 /*Quiz*/
 #optionList {
-
+    flex: ;
     top: 100px;
     font-family: 'Kanit', sans-serif;
     justify-content: center;
@@ -587,10 +596,12 @@ h2#questionNo {
     font-weight: 100;
 }
 
-/* .active {
+/*
+.active {
     background: #3F3B6C;
     color: white;
-} */
+}
+*/
 
 .disabled {
     pointer-events: none;
@@ -607,6 +618,7 @@ h2#questionNo {
 /*Progress Bar*/
 
 .progressText {
+    flex: 20%;
     position: absolute;
     font-size: 28px;
     font-family: 'Kanit', sans-serif;
@@ -675,11 +687,11 @@ span {
     }
 
     div.footer {
-        width: 80vw;
-        position: relative;
-
+        width: 100%;
+        position:absolute;
+        
         margin: auto;
-        bottom: 15vw
+        bottom: 8vw;
     }
 
     .logo {
@@ -797,17 +809,19 @@ span {
 
     }
 
-    div.question{
-        margin:18px;
+    div.question {
+        margin: 18px;
     }
-    questionText{
+
+    questionText {
         width: 20vw;
-        top:30rem;
+        top: 30rem;
     }
+
     .choice:hover::before {
         color: white;
         width:  0px;
-        height:  0px;
+        height: 600px;
     }
 
 
@@ -818,12 +832,17 @@ span {
         font-weight: 100;
     }
 
+
+
+
+
+
     .ProgressBar {
         z-index: 3
     }
 
     #optionList {
-         margin-top: 10vw;
+        margin-top: 10vw;
         position: absolute;
         z-index: 13;
     }
