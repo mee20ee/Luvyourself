@@ -398,7 +398,7 @@ a:link {
 .Contents {
 
     color: #3F3B6C;
-    z-index: 1000;
+    z-index: 4;
     position: absolute;
     text-align: center;
     justify-content: center;
