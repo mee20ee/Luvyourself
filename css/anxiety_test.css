@@ -1,4 +1,4 @@
- @font-face {
+@font-face {
     font-family: FC Minimal Regular;
     src: url(Font_FC-Minimal/FC Minimal Regular.otf) format("truetype");
 }
@@ -199,28 +199,27 @@ body {
     display: flex;
 }
 
-.logo {
-    display: flex;
-    position: absolute;
-    margin: 40px 20px;
+.logo { 
+   
+    flex: 20%;
+    margin: 40px 0 20px 7%;
     left: 50px;
-
 }
 
 .navbar {
-    position: absolute;
+    
+    flex: 0.7;
     border-radius: 50px;
     align-items: center;
     display: flex;
     padding: 0;
-    margin: 25px 0 0 70%;
 
 }
 
 .navbar li {
     display: flex;
     list-style: none;
-    margin: 0px 0 0 20%;
+    margin: 0px 0 0 10%;
 
 }
 
@@ -234,6 +233,7 @@ body {
     top: 10px;
     color: #3F3B6C;
     text-decoration: none;
+
 
 
 
@@ -287,6 +287,7 @@ a:link {
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
     z-index: 5;
+    bottom: 20px;
     
 
 }
@@ -375,21 +376,21 @@ a:link {
 
     position: absolute;
     left: 30%;
-    top: 82%;
+    top: 70%;
     z-index: 4;
 }
 
 #ground2 {
 
     position: absolute;
-    top: 80%;
+    top: 70%;
     z-index: 3;
 }
 
 #ground3 {
-
+    right: 2rem;
     position: absolute;
-    top: 80%;
+    top: 75%;
     z-index: 2;
 }
 
@@ -490,7 +491,7 @@ btn:active {
 .anxietyQuiz {
     flex-direction:column;
     align-items: center;
-    top: 130px;
+    top: 40px;
     display: none;
     position: relative;
     justify-content: center;
