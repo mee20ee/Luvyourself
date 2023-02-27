@@ -1,4 +1,4 @@
- @font-face {
+@font-face {
     font-family: FC Minimal Regular;
     src: url(Font_FC-Minimal/FC Minimal Regular.otf) format("truetype");
 }
@@ -7,7 +7,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden;
+/*    overflow: hidden;*/
 }
 
 .circle {
@@ -291,12 +291,18 @@ a:link {
     
 
 }
+ 
+.allstar{
+    width: 100%;
+    height: 100%;
+    
+}
 
 /*background-color*/
 .background {
 
-    /*    background-image: linear-gradient(to bottom, #e5e4f2, #e9e4f2, #ede4f2, #f0e5f1, #f4e5f0, #f8e5ee, #fce6eb, #fee7e8, #ffe8e3, #ffebdf, #fdeedc, #f8f1db);*/
-    position: fixed;
+    background-image: linear-gradient(to bottom, #e5e4f2, #e9e4f2, #ede4f2, #f0e5f1, #f4e5f0, #f8e5ee, #fce6eb, #fee7e8, #ffe8e3, #ffebdf, #fdeedc, #f8f1db);
+    position:fixed;
     width: 100%;
     height: 100%;
     transition-duration: 0.4s;
@@ -367,7 +373,7 @@ a:link {
 /*view*/
 .view {
     overflow: hidden;
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100%;
 }
@@ -684,15 +690,15 @@ span {
 
 @media screen and (max-width:768px) {
     body {
-        overflow: hidden;
+/*        overflow: hidden;*/
     }
 
     div.footer {
         width: 100%;
-        position:absolute;
+        position:relative;
         
         margin: auto;
-        bottom: 8vw;
+        top: 180vw;
     }
 
     .logo {
@@ -800,7 +806,7 @@ span {
     }
 
     .Contents {
-        top: 12%;
+        top: 20%;
         width: 355px;
     }
 
