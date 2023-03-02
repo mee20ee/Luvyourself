@@ -195,27 +195,26 @@ body {
 }
 
 .logo {
-    display: flex;
-    position: absolute;
-    margin: 10px 20px;
+    flex: 20%;
+    margin: 40px 0 20px 7%;
     left: 50px;
 
 }
 
 .navbar {
-    position: absolute;
+
+    flex: 0.7;
     border-radius: 50px;
     align-items: center;
     display: flex;
     padding: 0;
-    margin: 25px 0 0 70%;
 
 }
 
 .navbar li {
     display: flex;
     list-style: none;
-    margin: 0px 0 0 20%;
+    margin: 0px 0 0 10%;
 
 }
 
@@ -230,11 +229,8 @@ body {
     color: #3F3B6C;
     text-decoration: none;
 
-
-
-
-
 }
+
 
 .navbar li a:before {
     content: '';
@@ -245,17 +241,14 @@ body {
     width: 0%;
     border-radius: 15px;
     background: #3F3B6C;
-
     transition: all 0.4s ease;
-
-
-
 }
 
 .navbar li a.active {
 
     color: #3F3B6C;
 }
+
 
 
 
@@ -270,16 +263,17 @@ a:link {
 
 /*Footer*/
 .footer {
-
+    display: flex;
+    flex-direction: column;
     position: fixed;
     left: 0;
-    bottom: 15px;
+    bottom: 0;
     width: 100%;
     text-align: center;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
-    /*    text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.3);*/
-    z-index: 33;
+    z-index: 5;
+    bottom: 20px;
 
 }
 
@@ -288,8 +282,7 @@ a:link {
 
 /*background-color*/
 .background {
-
-    /*    background-image: linear-gradient(to bottom, #e5e4f2, #e9e4f2, #ede4f2, #f0e5f1, #f4e5f0, #f8e5ee, #fce6eb, #fee7e8, #ffe8e3, #ffebdf, #fdeedc, #f8f1db);*/
+    background-image: linear-gradient(to bottom, #e5e4f2, #e9e4f2, #ede4f2, #f0e5f1, #f4e5f0, #f8e5ee, #fce6eb, #fee7e8, #ffe8e3, #ffebdf, #fdeedc, #f8f1db);
     position: fixed;
     width: 100%;
     height: 100%;
@@ -358,77 +351,67 @@ a:link {
     }
 }
 
+.allstar {
+    height: 100%;
+    width: 100%;
+}
+
 .view {
-    position: relative;
+    position: fixed;
     width: 100%;
     height: 100%;
 }
 
 #ground1 {
-
     position: absolute;
     left: 30%;
-    top: 82%;
+    top: 70%;
     z-index: 4;
 }
 
 #ground2 {
-
     position: absolute;
-    top: 80%;
+    top: 70%;
     z-index: 3;
 }
 
 #ground3 {
-
+    right: 2rem;
     position: absolute;
-    top: 80%;
+    top: 75%;
     z-index: 2;
 }
 
 #cloud {
     width: 100%;
     position: absolute;
-    top: 35%;
+    /*    top: 35%;*/
     z-index: 1;
+
 }
 
-.a {
+
+.all {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
 }
 
 .Contents {
     color: #3F3B6C;
     z-index: 4;
     position: absolute;
-    width: 100%;
     text-align: center;
     justify-content: center;
     width: 712px;
     top: 25%;
     font-family: 'Kanit',
         sans-serif;
-    /*    animation: fadeIn 2s;*/
+    animation: fadeIn 2s;
     /*    text-shadow: 1px 2px 4px rgba(0,0,0,0.1);*/
 }
 
-.view1 svg {
-    width: 100% !important;
-    height: 100vh !important;
-    /* viewbox: auto; */
-}
 
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
 
 /*
 .Contents[closing] {
@@ -507,6 +490,7 @@ btn:active {
 
 
 div.question {
+
     text-align: center;
     position: absolute;
     display: flex;
@@ -514,7 +498,6 @@ div.question {
     top: 10px;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
-    width: 40vw;
 }
 
 h2#questionNo {
@@ -541,7 +524,6 @@ h2#questionNo {
 }
 
 .choice {
-
 
     position: relative;
     font-weight: 100;
@@ -593,10 +575,6 @@ h2#questionNo {
     font-weight: 100;
 }
 
-.active {
-    background: #3F3B6C;
-    color: white;
-}
 
 .disabled {
     pointer-events: none;
@@ -605,8 +583,9 @@ h2#questionNo {
 /*Progress Bar*/
 
 .progressText {
+    flex: 20%;
     position: absolute;
-    font-size: 25px;
+    font-size: 28px;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
     top: 26rem;
@@ -622,6 +601,7 @@ h2#questionNo {
     border-radius: 50px;
     overflow: hidden;
     top: 29rem;
+    box-shadow: 0 0 20px rgba(63, 59, 108, 0.5);
 
 }
 
@@ -673,11 +653,10 @@ span {
     }
 
     div.footer {
-        width: 80vw;
+        width: 100%;
         position: relative;
-
         margin: auto;
-        bottom: 15vw
+        top: 180vw;
     }
 
     .logo {
@@ -777,8 +756,6 @@ span {
         position: relative;
         color: white;
 
-
-
     }
 
     .navbar li a:hover {
@@ -808,8 +785,8 @@ span {
     }
 
     .Contents {
+        top: 20%;
         width: 355px;
-        top: 12%;
     }
 
     .Contents p {
@@ -819,13 +796,12 @@ span {
     }
 
     div.question {
-        width: 85vw;
-        margin: 0 18px;
+        margin: 18px;
     }
 
     questionText {
         width: 20vw;
-        top: 31rem;
+        top: 30rem;
     }
 
 
@@ -836,13 +812,32 @@ span {
         z-index: 13;
     }
 
-    .progressText {
-        top: 31rem;
+    .choice:hover::before {
+        color: white;
+        width: 0px;
+        height: 600px;
     }
 
+
+
+    #optionList h3:hover {
+
+        color: #3F3B6C;
+        font-weight: 100;
+    }
+
+
+
+
     .ProgressBar {
-        top: 34rem;
+
         z-index: 3
+    }
+
+    #optionList {
+        margin-top: 10vw;
+        position: absolute;
+        z-index: 13;
     }
 
 }
