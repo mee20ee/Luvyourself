@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: FC Minimal Regular;
+    font-family: 'Kanit', sans-serif;
     background: var(--color);
 }
 
@@ -151,7 +151,7 @@ a:link {
 
 h1 {
     margin: 20px;
-    font-size: 60px;
+    font-size: 50px;
     color: #3F3B6C;
 
 }
@@ -159,7 +159,7 @@ h1 {
 p {
     line-height: 150%;
     margin: 20px;
-    font-size: 30px;
+    font-size: 24px;
     color: #3F3B6C;
 }
 
@@ -170,7 +170,7 @@ p {
     margin-top: 15vw;
 }
 
-h3{
+h3 {
     line-height: 150%;
     color: #3F3B6C;
 }
@@ -378,7 +378,8 @@ h3{
 h2 {
     line-height: normal;
     margin: 0;
-    font-size: 50px;
+    font-size: 35px;
+    font-size: 35px;
     font-weight: 700;
     color: #3F3B6C;
 
@@ -387,16 +388,15 @@ h2 {
 
 h3 {
     line-height: 150%;
-    font-size: 27px;
+    font-size: 21px;
     font-weight: 500;
 }
 
 
 
 @media screen and (max-width:768px) {
-    body{
+    body {}
 
-    }
     .logo {
         left: 0;
     }
@@ -441,7 +441,7 @@ h3 {
         padding: 0;
         clip-path: circle(0% at 600px 10px);
         background: #3F3B6C;
-z-index: 5;
+        z-index: 5;
         cursor: pointer;
 
         transition: all 1.2s ease;
@@ -546,10 +546,12 @@ z-index: 5;
         width: 30%;
         float: center;
     }
-    .plant{
+
+    .plant {
         flex-direction: column;
         display: flex;
-}
+    }
+
     svg#plant {
         width: 50vw;
     }
@@ -664,7 +666,7 @@ z-index: 5;
         width: 80vw;
         margin-top: 20vw;
         float: left;
-       margin: auto;
+        margin: auto;
 
     }
 
