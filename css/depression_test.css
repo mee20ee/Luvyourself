@@ -495,7 +495,7 @@ div.question {
     position: absolute;
     display: flex;
     flex-direction: row;
-    top: 10px;
+    top:  40px;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
 }
@@ -794,9 +794,12 @@ span {
         margin: 20px 20px 20px;
 
     }
-
+    .depressionQuiz{
+        top: 12vw;
+    }
     div.question {
         margin: 18px;
+        top: 10px;
     }
 
     questionText {
@@ -827,10 +830,12 @@ span {
     }
 
 
-
+    .progressText{
+        top: 29rem;
+}
 
     .ProgressBar {
-
+        top: 32rem;
         z-index: 3
     }
 
