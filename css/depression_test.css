@@ -495,7 +495,7 @@ div.question {
     position: absolute;
     display: flex;
     flex-direction: row;
-    top:  40px;
+    top: 40px;
     font-family: 'Kanit', sans-serif;
     color: #3F3B6C;
 }
@@ -794,9 +794,11 @@ span {
         margin: 20px 20px 20px;
 
     }
-    .depressionQuiz{
+
+    .depressionQuiz {
         top: 12vw;
     }
+
     div.question {
         margin: 18px;
         top: 10px;
@@ -810,7 +812,7 @@ span {
 
 
     #optionList {
-        margin-top: 15vw;
+        margin-top: 16vw;
         position: absolute;
         z-index: 13;
     }
@@ -830,19 +832,14 @@ span {
     }
 
 
-    .progressText{
+    .progressText {
         top: 29rem;
-}
+    }
 
     .ProgressBar {
         top: 32rem;
         z-index: 3
     }
 
-    #optionList {
-        margin-top: 10vw;
-        position: absolute;
-        z-index: 13;
-    }
-
+   
 }
