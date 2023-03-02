@@ -476,7 +476,7 @@ btn:active {
 
 .depressionQuiz {
     flex-direction: row;
-    top: 140px;
+    top: 3vw;
     display: none;
     position: relative;
     justify-content: center;
