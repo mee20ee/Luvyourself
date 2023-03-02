@@ -152,6 +152,17 @@ else if (mostrecentScore >= 20 && mostrecentScore <= 27)
 
 
 
+$("#download").click(function () {
+    if (mostrecentScore <= 9)
+        window.location = 'pics/cardDepressionLevelYellow.jpg';
+    else if (mostrecentScore >= 10 && mostrecentScore <= 14)
+        window.location = 'pics/cardDepressionLevelPink.jpg';
+    else if (mostrecentScore >= 15 && mostrecentScore <= 21)
+        window.location = 'pics/cardDepressionLevelBlue.jpg';
+     else if (mostrecentScore >= 15 && mostrecentScore <= 21)
+        window.location = 'pics/cardDepressionLevelRed.jpg';
+});
+
 
 //cursor
 
