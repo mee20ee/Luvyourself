@@ -134,7 +134,7 @@ else if (mostrecentScore >= 10 && mostrecentScore <= 14)
     Level.innerHTML = " ปานกลาง";
 else if (mostrecentScore >= 15 && mostrecentScore <= 19)
     Level.innerHTML = " ค่อนข้างรุนแรง";
-else if (mostrecentScore >= 15 && mostrecentScore <= 19)
+else if (mostrecentScore >= 20 && mostrecentScore <= 27)
     Level.innerHTML = " รุนแรง";
 
 
@@ -153,13 +153,15 @@ else if (mostrecentScore >= 20 && mostrecentScore <= 27)
 
 
 $("#download").click(function () {
-    if (mostrecentScore <= 9)
+    if (mostrecentScore <= 4)
         window.location = 'pics/cardDepressionLevelYellow.jpg';
-    else if (mostrecentScore >= 10 && mostrecentScore <= 14)
+    else if (mostrecentScore >= 5 && mostrecentScore <= 9)
         window.location = 'pics/cardDepressionLevelPink.jpg';
-    else if (mostrecentScore >= 15 && mostrecentScore <= 21)
+    else if (mostrecentScore >= 10 && mostrecentScore <= 14)
         window.location = 'pics/cardDepressionLevelBlue.jpg';
-     else if (mostrecentScore >= 15 && mostrecentScore <= 21)
+     else if (mostrecentScore >= 15 && mostrecentScore <= 19)
+        window.location = 'pics/cardDepressionLevelGreen.jpg';
+    else if (mostrecentScore >= 20 && mostrecentScore <= 27)
         window.location = 'pics/cardDepressionLevelRed.jpg';
 });
 
