@@ -157,6 +157,19 @@ else if (mostrecentScore >= 42 && mostrecentScore <= 61)
 else
     recommend.innerHTML = "คุณมีความเครียดระดับรุนแรง ความเครียดระดับนี้ ส่งผลทำให้เจ็บป่วยทางกายและสุขภาพจิต คุณควรได้รับการช่วยเหลือจากผู้ให้การปรึกษาอย่างรวดเร็ว ";
 
+//download////
+
+$("#download").click(function () {
+    if (mostrecentScore <= 23)
+        window.location = 'pics/cardStressLevelYellow.jpg';
+    else if (mostrecentScore >= 24 && mostrecentScore <= 41)
+        window.location = 'pics/cardStressLevelPink.jpg';
+    else if (mostrecentScore >= 42 && mostrecentScore <= 61)
+        window.location = 'pics/cardStressLevelฺBlue.jpg';
+     else    
+        window.location = 'pics/cardStressLevelฺRed.jpg';
+    
+});
 
 //cursor
 
