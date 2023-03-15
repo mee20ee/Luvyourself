@@ -111,7 +111,7 @@ if (mostrecentScore <= 4) {
         "display": "block"
     });
 } else if (mostrecentScore >= 15 && mostrecentScore <= 19) {
-    $('.red').css({
+    $('.green').css({
         "display": "block"
     });
 } else if (mostrecentScore >= 20 && mostrecentScore <= 27) {
