@@ -1,717 +1,611 @@
-html {
-    --color: transparent;
-}
-
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Kanit', sans-serif;
-    background: var(--color);
-}
-
-@font-face {
-    font-family: FC Minimal Regular;
-    src: url(Font_FC-Minimal/FC Minimal Regular.otf) format("truetype");
-}
-
-div.footer {
-    background: aliceblue;
-    left: 0;
-    margin-bottom: 20px;
-    width: 100%;
-    text-align: center;
-    font-family: 'Kanit', sans-serif;
-    color: #3F3B6C;
-    text-shadow: 1px 2px 4px rgba(255, 255, 255, 0.3);
+ $("#wrapper").click(function () {
+     $(".menu").toggleClass("close");
+     $(".navbar").toggleClass("change-bar");
+ });
 
-}
 
+ //animate heading
 
-#wrapper {
-    z-index: 11;
-    left: 77%;
-    position: fixed;
-    width: 35px;
-    height: 30px;
-    margin: 45px 20px;
-}
+ ///walk///
+ var tl = new TimelineMax();
+ tl.add(TweenMax.from("h1", 2, {
+     opacity: 0,
+     y: 50,
 
-.line {
+ }));
 
-    cursor: pointer;
-    display: none;
-    height: 5px;
-    width: 100%;
-    background: #3F3B6C;
-    border-radius: 2px;
-    transition: 0.3s ease;
+ tl.add(TweenMax.from("p", 3, {
+     opacity: 0,
+     y: 30,
 
-}
 
-.top {
-    transform: translateY(-4px);
-}
+ }), "0");
 
-.bottom {
-    transform: translateY(4px);
-}
 
-.bar {
-    position: relative;
-    display: flex;
-}
 
-.logo {
-    display: flex;
-    position: absolute;
-    margin: 40px 20px;
-    left: 50px;
 
-}
 
-.navbar {
 
-    border-radius: 50px;
-    align-items: center;
-    display: flex;
-    padding: 0;
-    margin: 25px 0 0 70%;
+ //animate on scroll
+ gsap.registerPlugin(ScrollTrigger)
+ let t = gsap.timeline()
 
-}
+ gsap.to(".topic", {
+     opacity: 0,
+     y: "-80px",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_walk",
+         //         markers: true,
 
-.navbar li {
-    display: flex;
-    list-style: none;
-    margin: 0px 0 0 20%;
 
-}
+         //event: onEnter onLeave onEnterBack onLeaveBack
+         toggleActions: "restart none none reset"
+         //event: play, pause , resume , reset , restart ,complete , reverse , none
+     },
 
-.navbar li a {
-    position: relative;
-    display: flex;
-    font-family: 'Unbounded', cursive;
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 20px 10px 15px;
-    top: 10px;
-    color: #3F3B6C;
-    text-decoration: none;
 
+ });
 
+ //walk///
 
+ gsap.from(".text_walk", {
+     duration: 1,
+     opacity: 0,
+     x: "-50px",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_walk",
 
+         //         markers: true,
 
-}
 
-.navbar li a:before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 3px;
-    width: 0%;
-    border-radius: 15px;
-    background: #3F3B6C;
+         //event: onEnter onLeave onEnterBack onLeaveBack
+         toggleActions: "restart none none reset"
+         //event: play, pause , resume , reset , restart ,complete , reverse , none
+     },
 
-    transition: all 0.4s ease;
 
+ })
+ gsap.from("#img_walk", {
+     duration: 2,
+     opacity: 0,
+     x: "-50px",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_walk",
+         //         markers: true,
 
 
-}
+         //event: onEnter onLeave onEnterBack onLeaveBack
+         toggleActions: "restart none none reset"
+         //event: play, pause , resume , reset , restart ,complete , reverse , none
+     },
 
-.navbar li a.active {
 
-    color: #3F3B6C;
-}
+ });
 
+ ////plant////
+ gsap.from(".text_plant", {
+     duration: 2,
+     opacity: 0,
+     x: "-50vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_plant",
 
+         scrub: true,
+         //         markers: true,
+         start: "top 50%",
+         end: "bottom 90%",
 
-.navbar li a:hover::before {
-
-    width: 100%;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-
-.container {
-    position: relative;
-    margin: 20px;
-}
-
-.topic {
-    top: 15vw;
-    position: relative;
-    text-align: center;
-    align-items: center;
-}
-
-h1 {
-    margin: 20px;
-    font-size: 50px;
-    color: #3F3B6C;
-
-}
-
-p {
-    line-height: 150%;
-    margin: 20px;
-    font-size: 24px;
-    color: #3F3B6C;
-}
-
-.content {
-    display: grid;
-    margin: 20px;
-    position: relative;
-    margin-top: 15vw;
-}
-
-h3 {
-    line-height: 150%;
-    color: #3F3B6C;
-}
-
-.walk {
-
-    position: relative;
-
-}
-
-.text_walk {
-    top: 20vw;
-    position: absolute;
-    left: 20%;
-
-}
-
-#img_walk {
-    margin-right: 30%;
-    width: 30%;
-    float: right;
-}
-
-#_right_hand {
-    animation: right_hand 1.1s infinite linear;
-    animation-fill-mode: both;
-    animation-direction: alternate-reverse;
-}
-
-@keyframes right_hand {
-    frome {
-        transform: translateY(-1000px);
-    }
-
-    to {
-        transform: translateY(10px);
-    }
-}
-
-#walk {
-    animation: right_hand 1.1s infinite linear;
-    animation-fill-mode: both;
-    animation-direction: alternate-reverse;
-}
-
-/*
-
-///plant////
-*/
-.plant {
-    flex-direction: row;
-}
-
-#img_plant {
-    margin-top: 10%;
-    position: relative;
-    left: 20%;
-    float: left;
-    width: 20%;
-}
-
-.text_plant {
-    line-height: 150%;
-    width: 30vw;
-    margin-top: 25%;
-    float: right;
-    margin-right: 20%;
-
-}
-
-/*
-#leaf3 {
-
-    animation: le3 1.2s infinite alternate;
-    transform-origin:top;
-
-
-
-
-}
-
-@keyframes le3  {
-    to{
-        transform:translateX(20px);
-    }
-
-    frome {
-        transform: translateX(-20px);
-    }
-}
-*/
-
-/*phone*/
-
-
-#img_Nophone {
-    top: 15vw;
-    position: relative;
-    margin-right: 20%;
-    float: right;
-    width: 20%;
-    /*    transform-origin: rotate*/
-}
-
-.text_Nophone {
-    line-height: 150%;
-    margin-top: 20vw;
-    float: left;
-    margin-left: 20%;
-    width: 30vw;
-
-}
-
-.yoka {
-    flex-direction: row;
-}
-
-.text_yoka {
-    line-height: 150%;
-    width: 30vw;
-    margin-right: 15%;
-    margin-top: 25%;
-    float: right;
-
-
-}
-
-#img_yoka {
-    margin-top: 20%;
-    position: relative;
-    left: 20%;
-    float: left;
-    width: 26vw;
-    ;
-}
-
-.diary {
-    position: relative;
-    margin-top: 18%;
-}
-
-.text_diary {
-    line-height: 150%;
-    margin-top: 10%;
-    float: left;
-    margin-left: 18%;
-    width: 30vw;
-
-}
-
-#img_diary {
-
-    margin-right: 14%;
-    float: right;
-    width: 27%;
-    /*    transform-origin: rotate*/
-}
-
-.vegetable {
-    position: relative;
-    margin-top: 18%;
-}
-
-.text_vegetable {
-    line-height: 150%;
-    margin-top: 13%;
-    float: right;
-    margin-right: 10%;
-    width: 30vw;
-
-}
-
-#img_vegetable {
-    margin-right: 15%;
-    float: right;
-    width: 25%;
-    /*    transform-origin: rotate*/
-}
-
-.sleep {
-    margin-top: 25%;
-    margin-bottom: 20%;
-}
-
-.text_sleep {
-    line-height: 150%;
-    margin-top: 9%;
-    float: left;
-    margin-left: 20%;
-
-}
-
-#img_sleep {
-
-    margin-right: 20%;
-    float: right;
-    width: 30%;
-    /*    transform-origin: rotate*/
-}
-
-
-
-
-
-h2 {
-    line-height: normal;
-    margin: 0;
-    font-size: 35px;
-    font-size: 35px;
-    font-weight: 700;
-    color: #3F3B6C;
-
-
-}
-
-h3 {
-    line-height: 150%;
-    font-size: 21px;
-    font-weight: 500;
-}
-
-
-
-@media screen and (max-width:768px) {
-    body {}
-
-    .logo {
-        left: 0;
-    }
-
-    .line {
-        display: block;
-    }
-
-
-    .close .top {
-        transform: translateY(4px) rotate(-45deg);
-        background: white;
-    }
-
-    .close .bottom {
-        transform: translateY(-6px) rotate(45deg);
-        background: white;
-    }
-
-    .close .middle {
-        opacity: 0;
-    }
-
-    .close {
-        display: block;
-        transition: all 1.2s ease;
-    }
-
-    .navbar {
-        margin: 0;
-        border-radius: 0;
-        height: 100vh;
-        width: 100%;
-        display: block;
-        background-color: pink;
-        position: fixed;
-        align-items: center;
-        text-align: center;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 0;
-        clip-path: circle(0% at 600px 10px);
-        background: #3F3B6C;
-        z-index: 5;
-        cursor: pointer;
-
-        transition: all 1.2s ease;
-    }
-
-    .change-bar {
-
-        clip-path: circle(100%);
-        background: #3F3B6C;
-        transition: all 1.2s ease;
-    }
-
-
-    .navbar li a {
-
-        font-weight: 600;
-        display: block;
-        font-size: 30px;
-        margin: 160px 0;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        color: white;
-
-
-
-    }
-
-    .navbar li a:hover {
-        background: none;
-    }
-
-    .navbar li {
-        display: block;
-        margin: 0;
-    }
-
-    .navbar li a:before {
-        background: none;
-
-
-    }
-
-    .navbar li a.active {
-        color: palevioletred;
-    }
-
-
-
-    .contents {
-
-        display: flex;
-        flex-direction: column;
-        top: 30vw;
-        margin: 10px;
-        align-items: stretch;
-    }
-
-    .topic {
-        width: 80vw;
-        height: 120vw;
-        top: 65vw;
-        margin: 20px;
-
-    }
-
-    h1 {
-        margin: 20px;
-        font-size: 60px;
-        color: #3F3B6C;
-
-    }
-
-    p {
-        line-height: 150%;
-        margin: 20px;
-        font-size: 30px;
-        color: #3F3B6C;
-    }
-
-
-    .walk {
-
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .text_walk {
-        width: 70vw;
-        margin-top: 70vw;
-
-
-    }
-
-    svg#walk {
-        width: 70vw;
-    }
-
-    #img_walk img {
-        margin-right: 0;
-        width: 30%;
-        float: center;
-    }
-
-    .plant {
-        flex-direction: column;
-        display: flex;
-    }
-
-    svg#plant {
-        width: 50vw;
-    }
-
-    #img_plant img {
-        margin-top: 10%;
-        position: relative;
-
-        float: center;
-        width: 30vw;
-    }
-
-    .text_plant {
-        width: 70vw;
-        margin-top: 70vw;
-        float: center;
-
-
-    }
-
-    svg#phone {
-        width: 50vw;
-
-    }
-
-    .Nophone {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #img_Nophone img {
-        top: 15vw;
-        position: relative;
-        margin-right: ;
-        float: center;
-        justify-items: center;
-        align-items: center;
-        width: 40vw;
-        /*    transform-origin: rotate*/
-    }
-
-    .text_Nophone {
-        margin-top: 50%;
-        float: right;
-        width: 70vw;
-
-
-    }
-
-    .yoka {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .text_yoka {
-        margin-right: 15%;
-        margin-top: 25%;
-        float: right;
-        width: 70vw;
-
-
-    }
-
-    svg#yoka {
-        width: 70vw;
-
-    }
-
-    #img_yoka img {
-        margin-top: 30%;
-        position: relative;
-        left: 20%;
-        float: left;
-        width: 50vw;
-    }
-
-    svg#read {
-        width: 70vw;
-    }
-
-    .diary {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin-top: 18%;
-    }
-
-    .text_diary {
-        margin-top: 50%;
-        float: left;
-        margin-left: 18%;
-        width: 75vw;
-
-    }
-
-    #img_diary img {
-
-        margin-right: 14%;
-        float: right;
-        width: 50vw;
-        /*    transform-origin: rotate*/
-    }
-
-    .vegetable {
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        margin-top: 18%;
-    }
-
-    .text_vegetable {
-        width: 80vw;
-        margin-top: 20vw;
-        float: left;
-        margin: auto;
-
-    }
-
-    svg#vegetable {
-        width: 70vw;
-    }
-
-    #img_vegetable img {
-        margin-right: 10%;
-        float: right;
-        width: 50vw;
-        /*    transform-origin: rotate*/
-    }
-
-    .sleep {
-        display: flex;
-        flex-direction: column;
-        margin-top: 30%;
-        margin-bottom: 20%;
-    }
-
-    .text_sleep {
-        width: 80vw;
-        margin-top: 10vw;
-        float: left;
-        margin-left: 10%;
-
-    }
-
-    svg#sleep {
-        width: 70vw;
-    }
-
-    #img_sleep img {
-
-        margin: 20vw;
-        float: right;
-        width: 60vw;
-        /*    transform-origin: rotate*/
-    }
-
-    .footer {
-        width: auto;
-        margin: 20vw 10px 0 10px;
-        position: relative;
-
-    }
-}
+     },
+
+
+ })
+ gsap.from("#img_plant", {
+     duration: 1,
+     opacity: 0,
+     y: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: "#img_plant",
+         scrub: 1,
+//         markers: true,
+         start: "top 90%",
+         end: "bottom 60%",
+     },
+
+
+ })
+
+ /////NoPhone/////
+ gsap.from(".text_Nophone", {
+     duration: 2,
+     opacity: 0,
+     x: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_Nophone",
+         scrub: 1,
+//         markers: true,
+         start: "top 50%",
+         end: "bottom 90%",
+
+     },
+
+
+ })
+ gsap.from("#img_Nophone", {
+     duration: 1,
+     opacity: 0,
+     y: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: "#img_Nophone",
+         scrub: 1,
+//         markers: true,
+         start: "top 80%",
+         end: "bottom 90%",
+
+     },
+
+
+ })
+
+
+ /////yoka/////
+ gsap.from(".text_yoka", {
+     duration: 2,
+     opacity: 0,
+     x: "10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_yoka",
+         scrub: 1,
+//         markers: true,
+         start: "top 70%",
+         end: "bottom 60%",
+
+     },
+
+
+ })
+ gsap.from("#img_yoka", {
+     duration: 1,
+     opacity: 0,
+     y: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: "#img_yoka",
+         scrub: 1,
+//         markers: true,
+         start: "top 70%",
+         end: "bottom 60%",
+
+     },
+
+
+ })
+ /////diary/////
+ gsap.from(".text_diary", {
+     duration: 2,
+     opacity: 0,
+     x: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_diary",
+         scrub: 1,
+//         markers: true,
+         start: "top 80%",
+         end: "bottom 100%",
+
+     },
+
+
+ })
+ gsap.from("#img_diary", {
+     duration: 1,
+     opacity: 0,
+     y: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: "#img_diary",
+         scrub: 1,
+//         markers: true,
+         start: "top 100%",
+         end: "bottom 90%",
+
+     },
+
+
+ })
+
+ /////vegetable/////
+ gsap.from(".text_vegetable", {
+     duration: 2,
+     opacity: 0,
+     x: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_vegetable",
+         scrub: 1,
+//         markers: true,
+         start: "top 60%",
+         end: "bottom 100%",
+
+     },
+
+
+ })
+ gsap.from("#img_vegetable", {
+     duration: 1,
+     opacity: 0,
+     y: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: "#img_vegetable",
+         scrub: 1,
+//         markers: true,
+         start: "top 80%",
+         end: "bottom 60%",
+
+     },
+
+
+ })
+
+ /////vegetable/////
+ gsap.from(".text_sleep", {
+     duration: 2,
+     opacity: 0,
+     x: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: ".text_sleep",
+         scrub: 1,
+//         markers: true,
+         start: "top 60%",
+         end: "bottom 100%",
+
+     },
+
+
+ })
+ gsap.from("#img_sleep", {
+     duration: 1,
+     opacity: 0,
+     y: "-10vw",
+     ease: "linear",
+     scrollTrigger: {
+         trigger: "#img_sleep",
+         scrub: 1,
+//         markers: true,
+          start: "top 80%",
+         end: "bottom 90%",
+
+
+     },
+
+
+ })
+
+
+ //Scrolling animation////
+
+ ScrollTrigger.create({
+
+     trigger: '.topic',
+//     markers: true,
+     start: "top 50%",
+     end: "bottom 0%",
+
+     onEnter: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FFDEDE'
+         })
+     },
+
+     onLeaveBack: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#F5EAEA'
+         })
+     },
+
+
+ })
+
+ ScrollTrigger.create({
+
+     trigger: '.walk',
+//     markers: true,
+     start: "top 50%",
+     end: "bottom 0%",
+
+     onEnter: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#F0DBDB'
+         })
+     },
+
+     onLeaveBack: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#F4D9E7'
+         })
+     },
+
+
+ })
+ ScrollTrigger.create({
+
+     trigger: '.plant',
+//     markers: true,
+     start: "top 50%",
+     end: "bottom 0%",
+
+     onEnter: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FAD3E7'
+         })
+     },
+
+     onLeaveBack: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FEFCF3'
+         })
+     },
+
+
+ })
+
+ ScrollTrigger.create({
+
+     trigger: '.Nophone',
+//     markers: true,
+     start: "top 50%",
+     end: "bottom 0%",
+
+     onEnter: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FAECD6'
+         })
+     },
+
+     onLeaveBack: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FFE5F1'
+         })
+     },
+
+
+ })
+ ScrollTrigger.create({
+
+     trigger: '.yoka',
+//     markers: true,
+     start: "top 50%",
+     end: "bottom 0%",
+
+     onEnter: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#F5FFCB'
+         })
+     },
+
+     onLeaveBack: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FEFCF3'
+         })
+     },
+
+
+ })
+
+ ScrollTrigger.create({
+
+     trigger: '.diary',
+//     markers: true,
+     start: "top 50%",
+     end: "bottom 0%",
+
+     onEnter: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FDE2E2'
+         })
+     },
+
+     onLeaveBack: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FFE3E1'
+         })
+     },
+
+
+ })
+ ScrollTrigger.create({
+
+     trigger: '.vegetable',
+//     markers: true,
+     start: "top 50%",
+     end: "bottom 0%",
+
+     onEnter: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#F5F0BB'
+         })
+     },
+
+     onLeaveBack: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#FFEFEF'
+         })
+     },
+
+
+ })
+
+ ScrollTrigger.create({
+
+     trigger: '.sleep',
+//     markers: true,
+     start: "top 50%",
+     end: "bottom 0%",
+
+     onEnter: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#F7DBF0'
+         })
+     },
+
+     onLeaveBack: () => {
+         gsap.to('body', {
+             duration: 1.0,
+             backgroundColor: '#DBC6EB'
+         })
+     },
+
+
+ })
+
+
+
+
+
+
+
+ ////Background Color Change///
+ // gsap.registerPlugin(ScrollTrigger);
+ //
+ // const locoScroll = new LocomotiveScroll({
+ //     el: document.querySelector(".container"),
+ //     smooth: true
+ // });
+ //
+ // ScrollTrigger.scrollerProxy(".container", {
+ //     scrollTop(value) {
+ //         return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+ //     },
+ //     getBoundingClientRect() {
+ //         return {
+ //             top: 0,
+ //             left: 0,
+ //             width: window.innerWidth,
+ //             height: window.innerHeight
+ //         };
+ //     },
+ //     pinType: document.querySelector(".container").style.transform ? "transform" : "fixed"
+ // });
+ //
+ // gsap.to("body", {
+ //     "--color": "#FFFFE8",
+ //     immediateRender: false,
+ //     scrollTrigger: {
+ //         trigger: ".topic",
+ //         scroller: ".container",
+ //         scrub: true,
+ //         start: 'top bottom',
+ //         end: '+=100%'
+ //     }
+ // });
+ //
+ // gsap.to("body", {
+ //     "--color": "#FFFAD7",
+ //     immediateRender: false,
+ //     scrollTrigger: {
+ //         trigger: ".walk",
+ //         scroller: ".container",
+ //         scrub: true,
+ //         start: 'top bottom',
+ //         end: '+=100%'
+ //     }
+ // });
+ //
+ // gsap.to("body", {
+ //     "--color": "#FFF2F2",
+ //     immediateRender: false,
+ //     scrollTrigger: {
+ //         trigger: ".plant",
+ //         scroller: ".container",
+ //         scrub: true,
+ //         start: 'top bottom',
+ //         end: '+=100%'
+ //     }
+ // });
+ // gsap.to("body", {
+ //     "--color": "#E8F3D6",
+ //     immediateRender: false,
+ //     scrollTrigger: {
+ //         trigger: ".Nophone",
+ //         scroller: ".container",
+ //         scrub: true,
+ //         start: 'top bottom',
+ //         end: '+=100%'
+ //     }
+ // });
+ // gsap.to("body", {
+ //     "--color": "#FEFCF3",
+ //     immediateRender: false,
+ //     scrollTrigger: {
+ //         trigger: ".yoka",
+ //         scroller: ".container",
+ //         scrub: true,
+ //         start: 'top bottom',
+ //         end: '+=100%'
+ //     }
+ // });
+ // gsap.to("body", {
+ //     "--color": "#EFF5F5",
+ //     immediateRender: false,
+ //     scrollTrigger: {
+ //         trigger: ".diary",
+ //         scroller: ".container",
+ //         scrub: true,
+ //         start: 'top bottom',
+ //         end: '+=100%'
+ //     }
+ // });
+ // gsap.to("body", {
+ //     "--color": "#EFF5F5",
+ //     immediateRender: false,
+ //     scrollTrigger: {
+ //         trigger: ".vegetable",
+ //         scroller: ".container",
+ //         scrub: true,
+ //         start: 'top bottom',
+ //         end: '+=100%'
+ //     }
+ // });
+ // gsap.to("body", {
+ //     "--color": "#EFF5F5",
+ //     immediateRender: false,
+ //     scrollTrigger: {
+ //         trigger: ".sleep",
+ //         scroller: ".container",
+ //         scrub: true,
+ //         start: 'top bottom',
+ //         end: '+=100%'
+ //     }
+ // });
+ //
+ //
+ //
+ //
+ // locoScroll.on("scroll", ScrollTrigger.update);
+ // ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+ //
+ // ScrollTrigger.refresh();
